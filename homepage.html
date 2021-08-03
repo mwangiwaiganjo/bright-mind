@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Bright are you</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body> 
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Login Form</div>
+            <div class="title signup">Signup Form</div> 
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slider" id="login" checked>
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Signup</label>
+                <div class="slide-tab"></div>
+            </div>
+            <div class="form-inner">
+             <form action="#" class="login">
+                <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="pass-link"><a href="#">Forgot password?</a></div>
+                <div class="field">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="signup-link">Not a member <a href="#">Sign-up Now</a></div>
+             </form>
+             <form action="#" class="signup">
+                <div class="field">
+                    <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Confirm Password" >
+                </div>
+                <div class="field">
+                    <input type="submit" value="Sign-up">
+                </div>
+             </form>  
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginForm = document.querySelector("form.login");
+        const signupForm = document.querySelector("form.signup");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signuplink = document.querySelector(".signup-link a");
+        signupBtn.onclick = (()=>{
+            loginForm.style.marginleft= "-50%";
+        });
+        loginBtn.onclick = (()=>{
+            loginForm.style.marginleft= "-0%";
+        });
+        signuplink.onclick = (()=>{
+            signupBtn.click();
+        });
+    </script>
+</body>
+</html>
